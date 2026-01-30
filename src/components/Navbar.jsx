@@ -11,8 +11,8 @@ const Navbar = () => {
   const menuItems = [
     { id: 1, text: "Home", link: "#" },
     { id: 2, text: "About", link: "#about" },
-    { id: 3, text: "Stack", link: "#stack" },
-    { id: 4, text: "Projects", link: "#projects" },
+    { id: 3, text: "Experience", link: "#experience" },
+    { id: 4, text: "Stack", link: "#stack" },
     { id: 5, text: "Contact", link: "#contact" },
   ];
 
