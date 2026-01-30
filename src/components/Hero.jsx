@@ -25,20 +25,25 @@ const Hero = () => {
       </div>
 
       {/* Die "Code-Span" Anzeige unten rechts (aus dem Screenshot) */}
-      <div className="absolute bottom-20 right-10 md:right-20 text-right hidden md:block">
-        <p className="text-accent-orange font-mono text-xl">&lt;span&gt;</p>
-        <p className="text-gray-400 max-w-xs text-base font-light mt-2 leading-snug">
-          Proficient in the latest web technologies and frameworks, continuously
-          expanding my skill set to stay at the forefront of the industry.
-        </p>
-        <p className="text-accent-orange font-mono text-xl mt-2">
-          &lt;/span&gt;
-        </p>
+      <div className="absolute bottom-10 right-6 md:right-16 text-right hidden md:block">
+        <div className="font-mono space-y-1">
+          <p className="text-accent-orange text-lg opacity-80">&lt;span&gt;</p>
+
+          <div className="flex flex-col items-end border-r-2 border-accent-orange/30 pr-4 mr-2">
+            <p className="text-gray-400 max-w-sm text-sm md:text-base leading-relaxed italic">
+              "Proficient in the latest web technologies and frameworks,
+              continuously expanding my skill set to stay at the forefront of
+              the industry."
+            </p>
+          </div>
+
+          <p className="text-accent-orange text-lg opacity-80">&lt;/span&gt;</p>
+        </div>
       </div>
 
       {/* E-Mail an der Seite (Vertical Text) - links unten */}
       <div className="absolute left-4 bottom-12 origin-bottom-left -rotate-90 text-gray-500 text-[10px] tracking-[0.2em] font-medium hidden lg:block uppercase">
-        joshua.vaeth@gmail.com
+        joshua.vaeth@yahoo.de
       </div>
     </section>
   );
