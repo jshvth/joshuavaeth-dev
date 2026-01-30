@@ -24,3 +24,8 @@ body {
 .animate-fade-in {
   animation: fade-in 1s ease-out forwards;
 }
+
+/* src/index.css */
+html {
+  scroll-behavior: smooth;
+}
