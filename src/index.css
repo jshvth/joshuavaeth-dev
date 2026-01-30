@@ -3,13 +3,15 @@
 @theme {
   --color-dark-bg: #050505;
   --color-accent-orange: #bc5939;
+  
+  /* Falls Schriften nicht laden, hier explizit zuweisen */
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-sans: "Inter", system-ui, sans-serif;
 }
 
 body {
   margin: 0;
-  padding: 0;
-  background-color: var(--color-dark-bg);
+  background-color: #050505;
   color: white;
-  min-height: 100vh;
-  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }

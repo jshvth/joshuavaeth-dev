@@ -6,7 +6,7 @@ const About = () => {
       id="about"
       className="min-h-screen flex flex-col justify-center px-10 md:px-20 py-20 bg-dark-bg"
     >
-      {/* 1. Das Statement - Dezent und elegant */}
+      {/* 1. Das Statement */}
       <div className="mb-16">
         <h2 className="text-xl md:text-2xl lg:text-3xl font-light text-gray-400 leading-relaxed max-w-3xl">
           I believe in a{" "}
@@ -58,13 +58,13 @@ const About = () => {
           </div>
         </div>
 
-        {/* Bild-Container (Rechts) */}
+        {/* Bild-Container (Rechts) - Fixiert auf max-h-500px */}
         <div className="w-full lg:w-1/3 order-1 lg:order-2">
-          <div className="relative aspect-[3/4] overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-500 border border-gray-800">
+          <div className="relative aspect-[3/4] max-h-[500px] overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-500 border border-gray-800">
             <img
               src="/src/assets/joshua.jpg"
               alt="Joshua Väth"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
               onError={(e) => {
                 e.target.src =
                   "https://via.placeholder.com/600x800?text=Joshua";
