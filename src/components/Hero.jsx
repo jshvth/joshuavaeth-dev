@@ -2,47 +2,80 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-10 md:px-20 overflow-hidden bg-dark-bg">
-      {/* Hintergrund-Effekt (Platzhalter für Partikel) */}
-      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-        {/* Hier kommen später die Partikel-Effekte rein */}
-      </div>
+    <section
+      id="home"
+      className="relative min-h-screen flex flex-col justify-center px-10 md:px-24 overflow-hidden bg-dark-bg"
+    >
+      {/* Sanfte Hintergrund-Glows für Tiefe */}
+      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-accent-orange/10 rounded-full blur-[120px] animate-pulse"></div>
+      <div className="absolute bottom-1/4 -left-20 w-72 h-72 bg-white/5 rounded-full blur-[100px]"></div>
 
-      <div className="z-10">
-        <h1 className="text-6xl md:text-8xl font-bold leading-tight uppercase tracking-tighter">
-          <span className="text-accent-orange">FRONTEND</span> <br />
-          <span className="text-white">DEVELOPER</span>
+      <div className="z-10 relative">
+        {/* Eyecatcher: Status-Indikator */}
+        <div className="flex items-center gap-4 mb-8 animate-fade-in">
+          <div className="w-10 h-[1px] bg-accent-orange"></div>
+          <span className="text-accent-orange font-mono text-[10px] tracking-[0.4em] uppercase">
+            Available for projects
+          </span>
+        </div>
+
+        {/* Headline: Schlanker & Eleganter */}
+        <h1 className="text-6xl md:text-8xl lg:text-[9rem] font-medium leading-[0.9] uppercase tracking-tighter">
+          <span className="text-accent-orange block transition-all duration-700 hover:tracking-widest cursor-default">
+            FRONTEND
+          </span>
+          <span className="text-white block opacity-90 italic font-light">
+            DEVELOPER
+          </span>
         </h1>
 
-        <p className="mt-6 text-gray-400 max-w-lg text-lg leading-relaxed">
-          Hi! Ich bin Joshua. Ein Frontend Developer mit Leidenschaft für
-          hochperformante, skalierbare und responsive Web-Lösungen.
-        </p>
+        <div className="flex flex-col md:flex-row md:items-end gap-12 mt-12">
+          <p className="text-gray-400 max-w-md text-lg md:text-xl leading-relaxed font-light">
+            Hi! Ich bin <span className="text-white font-medium">Joshua</span>.
+            Ich entwickle Web-Lösungen, die durch{" "}
+            <span className="text-white italic">Design</span> und{" "}
+            <span className="text-white italic">Präzision</span> überzeugen.
+          </p>
 
-        <button className="mt-10 px-8 py-3 bg-accent-orange text-white font-bold rounded-sm hover:opacity-80 transition-all cursor-pointer">
-          Download CV
-        </button>
-      </div>
+          {/* Button mit Slide-Effekt in Orange & Download-Funktion */}
+          <div className="flex flex-col gap-4">
+            <a
+              href="/Lebenslauf_Joshua_Vaeth.pdf" // Stelle sicher, dass die Datei so im 'public' Ordner liegt
+              download="Joshua_Vaeth_CV.pdf"
+              className="relative px-10 py-4 bg-transparent border border-accent-orange/40 text-white font-medium rounded-sm overflow-hidden group transition-all cursor-pointer inline-block text-center"
+            >
+              {/* Slide-Effekt: Jetzt in Accent-Orange */}
+              <span className="absolute inset-0 bg-accent-orange translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300"></span>
 
-      {/* Die "Code-Span" Anzeige unten rechts (aus dem Screenshot) */}
-      <div className="absolute bottom-10 right-6 md:right-16 text-right hidden md:block">
-        <div className="font-mono space-y-1">
-          <p className="text-accent-orange text-lg opacity-80">&lt;span&gt;</p>
-
-          <div className="flex flex-col items-end border-r-2 border-accent-orange/30 pr-4 mr-2">
-            <p className="text-gray-400 max-w-sm text-sm md:text-base leading-relaxed italic">
-              "Proficient in the latest web technologies and frameworks,
-              continuously expanding my skill set to stay at the forefront of
-              the industry."
-            </p>
+              {/* Button-Text: Bleibt weiß beim Hover */}
+              <span className="relative z-10 uppercase tracking-[0.2em] text-xs">
+                Download CV
+              </span>
+            </a>
           </div>
-
-          <p className="text-accent-orange text-lg opacity-80">&lt;/span&gt;</p>
         </div>
       </div>
 
-      {/* E-Mail an der Seite (Vertical Text) - links unten */}
-      <div className="absolute left-4 bottom-12 origin-bottom-left -rotate-90 text-gray-500 text-[10px] tracking-[0.2em] font-medium hidden lg:block uppercase">
+      {/* Die "Span" Quote - Jetzt knalliger & präsenter */}
+      <div className="absolute bottom-16 right-10 md:right-24 text-right hidden lg:block">
+        <div className="font-mono">
+          <p className="text-accent-orange text-sm mb-2 opacity-100 font-bold">
+            &lt;span&gt;
+          </p>
+          <div className="border-r-2 border-accent-orange pr-6">
+            <p className="text-white max-w-[320px] text-sm md:text-base leading-relaxed italic opacity-90">
+              "Proficient in the latest web technologies, continuously expanding
+              my skill set to stay at the forefront of the industry."
+            </p>
+          </div>
+          <p className="text-accent-orange text-sm mt-2 opacity-100 font-bold">
+            &lt;/span&gt;
+          </p>
+        </div>
+      </div>
+
+      {/* E-Mail an der Seite */}
+      <div className="absolute left-6 bottom-24 origin-bottom-left -rotate-90 text-gray-500 text-[10px] tracking-[0.4em] font-medium hidden lg:block uppercase border-b border-white/10 pb-1 hover:text-white transition-colors">
         joshua.vaeth@yahoo.de
       </div>
     </section>

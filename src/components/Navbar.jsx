@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HiMenuAlt3, HiX } from "react-icons/hi"; // Wir nutzen react-icons
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -8,8 +8,13 @@ const Navbar = () => {
     setNav(!nav);
   };
 
+  // Funktion zum Schließen des Menüs beim Klick auf einen Link oder das Logo
+  const closeNav = () => {
+    setNav(false);
+  };
+
   const menuItems = [
-    { id: 1, text: "Home", link: "#" },
+    { id: 1, text: "Home", link: "#home" },
     { id: 2, text: "About", link: "#about" },
     { id: 3, text: "Experience", link: "#experience" },
     { id: 4, text: "Stack", link: "#stack" },
@@ -18,9 +23,11 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full h-20 flex justify-between items-center px-10 z-[100]">
-      {/* Logo oder Name (optional, Ahmed hat es oft leer oder dezent) */}
-      <div className="text-white font-bold tracking-widest cursor-pointer">
-        JV
+      {/* Logo: Klick führt zurück zum Home/Hero-Bereich */}
+      <div className="text-white font-bold tracking-widest cursor-pointer hover:text-accent-orange transition-colors duration-300">
+        <a href="#home" onClick={closeNav}>
+          JV
+        </a>
       </div>
 
       {/* Burger Icon */}
@@ -42,17 +49,31 @@ const Navbar = () => {
               key={item.id}
               className="p-4 text-4xl hover:text-accent-orange duration-300 cursor-pointer uppercase font-bold tracking-tighter"
             >
-              <a onClick={handleNav} href={item.link}>
+              <a onClick={closeNav} href={item.link}>
                 {item.text}
               </a>
             </li>
           ))}
         </ul>
 
-        {/* Social Links im Menü (optional) */}
+        {/* Social Links im Menü */}
         <div className="absolute bottom-10 flex gap-8 text-gray-400">
-          <span className="hover:text-white cursor-pointer">LinkedIn</span>
-          <span className="hover:text-white cursor-pointer">GitHub</span>
+          <a
+            href="https://www.linkedin.com/in/joshuavaeth/"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-white cursor-pointer uppercase text-[10px] tracking-widest"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/jshvth"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-white cursor-pointer uppercase text-[10px] tracking-widest"
+          >
+            GitHub
+          </a>
         </div>
       </div>
     </nav>
