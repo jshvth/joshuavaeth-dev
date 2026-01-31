@@ -6,13 +6,12 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#050505]"
     >
-      {/* 1. HINTERGRUND-GLOWS - Tiefer gesetzt */}
+      {/* 1. HINTERGRUND-GLOWS */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none z-0">
-        {/* Haupt-Glow Orange: Von top-[12%] auf top-[25%] geschoben */}
-        <div className="absolute top-[25%] right-[8%] w-[250px] h-[250px] md:w-[450px] md:h-[450px] bg-[#bc5939]/40 rounded-full blur-[60px] md:blur-[90px] animate-soft-glow"></div>
+        {/* Haupt-Glow Orange: Jetzt auf top-[32%] für maximalen Abstand zur Navbar */}
+        <div className="absolute top-[32%] right-[8%] w-[250px] h-[250px] md:w-[450px] md:h-[450px] bg-[#bc5939]/40 rounded-full blur-[60px] md:blur-[90px] animate-soft-glow"></div>
 
-        {/* Kontrast-Glow: Etwas tiefer und weiter nach links */}
-        <div className="absolute bottom-[15%] left-[5%] w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-white/5 rounded-full blur-[70px] opacity-30"></div>
+        {/* Weißer Kontrast-Glow wurde entfernt */}
       </div>
 
       {/* 2. CONTENT CONTAINER */}
@@ -26,7 +25,7 @@ const Hero = () => {
 
         <h1 className="text-5xl md:text-8xl lg:text-[9rem] font-medium leading-[0.95] md:leading-[0.9] uppercase tracking-tighter">
           <span className="text-accent-orange block transition-all duration-700 hover:tracking-widest cursor-default">
-            FULLSTACK
+            FRONTEND
           </span>
           <span className="text-white block opacity-90 italic font-light">
             DEVELOPER
@@ -36,7 +35,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-12 mt-8 md:mt-12">
           <p className="text-gray-400 max-w-md text-base md:text-xl leading-relaxed font-light">
             Hi! I'm <span className="text-white font-medium">Joshua</span>.
-            Full-stack developer with a particular passion for{" "}
+            Frontend developer with a particular passion for{" "}
             <span className="text-white italic">front-end development</span>{" "}
             that impresses with its{" "}
             <span className="text-white italic">
@@ -75,6 +74,11 @@ const Hero = () => {
             &lt;/span&gt;
           </p>
         </div>
+      </div>
+
+      {/* 4. E-MAIL SIDEBAR (Wieder da!) */}
+      <div className="absolute left-6 bottom-24 origin-bottom-left -rotate-90 text-gray-500 text-[10px] tracking-[0.4em] font-medium hidden lg:block uppercase border-b border-white/10 pb-1 hover:text-white transition-colors">
+        joshua.vaeth@yahoo.de
       </div>
     </section>
   );

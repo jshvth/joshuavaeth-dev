@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { SiBuymeacoffee } from "react-icons/si";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -16,18 +17,23 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full h-16 md:h-20 flex justify-between items-center px-6 md:px-10 z-[100] bg-dark-bg/80 backdrop-blur-md">
+      {/* Logo */}
       <div className="text-white font-bold tracking-widest cursor-pointer hover:text-accent-orange transition-colors">
         <a href="#home" onClick={closeNav}>
           JV
         </a>
       </div>
 
+      {/* Hamburger Menu Toggle */}
       <div onClick={handleNav} className="z-[110] cursor-pointer text-white">
         {nav ? <HiX size={30} /> : <HiMenuAlt3 size={30} />}
       </div>
 
+      {/* Fullscreen Overlay Menu */}
       <div
-        className={`fixed left-0 top-0 w-full h-screen bg-dark-bg/98 backdrop-blur-xl flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${nav ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
+        className={`fixed left-0 top-0 w-full h-screen bg-dark-bg/98 backdrop-blur-xl flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${
+          nav ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+        }`}
       >
         <ul className="flex flex-col items-center">
           {menuItems.map((item) => (
@@ -42,22 +48,17 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="absolute bottom-10 flex gap-8 text-gray-400">
+        {/* Bottom Menu Link: Buy Me A Coffee (Ersatz für Socials) */}
+        <div className="absolute bottom-16 flex flex-col items-center gap-4 text-gray-400">
+          <div className="w-8 h-[1px] bg-white/10"></div>
           <a
-            href="https://linkedin.com"
+            href="https://buymeacoffee.com/joshuavaetg"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-white text-[10px] tracking-widest uppercase"
+            className="flex items-center gap-3 hover:text-[#FFDD00] transition-all text-[11px] tracking-[0.4em] uppercase font-medium"
           >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-white text-[10px] tracking-widest uppercase"
-          >
-            GitHub
+            <SiBuymeacoffee size={18} />
+            Buy me a coffee ❤️
           </a>
         </div>
       </div>
