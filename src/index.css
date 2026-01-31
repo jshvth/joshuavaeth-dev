@@ -4,9 +4,19 @@
   --color-dark-bg: #050505;
   --color-accent-orange: #bc5939;
   
-  /* Falls Schriften nicht laden, hier explizit zuweisen */
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
   --font-sans: "Inter", system-ui, sans-serif;
+}
+
+/* Versteckt die Standard-Scrollbar (da du ja die Progress Bar rechts hast) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 body {
@@ -23,38 +33,4 @@ body {
 
 .animate-fade-in {
   animation: fade-in 1s ease-out forwards;
-}
-
-/* src/index.css */
-html {
-  scroll-behavior: smooth;
-}
-
-/* src/index.css */
-
-/* Breite der Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-/* Hintergrund der Scrollbar (Track) */
-::-webkit-scrollbar-track {
-  background: #0a0a0a; /* Dein dark-bg */
-}
-
-/* Der bewegliche Griff (Thumb) */
-::-webkit-scrollbar-thumb {
-  background: #FF5733; /* Dein accent-orange */
-  border-radius: 10px;
-}
-
-/* Hover-Effekt auf dem Griff */
-::-webkit-scrollbar-thumb:hover {
-  background: #e64e2e;
-}
-
-/* Für Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #FF5733 #0a0a0a;
 }
