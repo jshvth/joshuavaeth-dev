@@ -65,7 +65,7 @@ const Footer = () => {
 
           {/* Copyright - Besser sichtbar */}
           <div className="text-gray-400 font-mono text-[11px] uppercase tracking-[0.3em] opacity-80">
-            © {currentYear} — Crafted by Joshua Väth
+            © {currentYear} Built with love
           </div>
         </div>
       </div>

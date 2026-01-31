@@ -15,14 +15,14 @@ const Hero = () => {
         <div className="flex items-center gap-4 mb-8 animate-fade-in">
           <div className="w-10 h-[1px] bg-accent-orange"></div>
           <span className="text-accent-orange font-mono text-[10px] tracking-[0.4em] uppercase">
-            Available for projects
+            Lets work together
           </span>
         </div>
 
         {/* Headline: Schlanker & Eleganter */}
         <h1 className="text-6xl md:text-8xl lg:text-[9rem] font-medium leading-[0.9] uppercase tracking-tighter">
           <span className="text-accent-orange block transition-all duration-700 hover:tracking-widest cursor-default">
-            FRONTEND
+            FULLSTACK
           </span>
           <span className="text-white block opacity-90 italic font-light">
             DEVELOPER
@@ -31,10 +31,11 @@ const Hero = () => {
 
         <div className="flex flex-col md:flex-row md:items-end gap-12 mt-12">
           <p className="text-gray-400 max-w-md text-lg md:text-xl leading-relaxed font-light">
-            Hi! Ich bin <span className="text-white font-medium">Joshua</span>.
-            Ich entwickle Web-Lösungen, die durch{" "}
-            <span className="text-white italic">Design</span> und{" "}
-            <span className="text-white italic">Präzision</span> überzeugen.
+            Hi! I'm <span className="text-white font-medium">Joshua</span>.
+            Full-stack developer with a particular passion for{" "}
+            <span className="text-white italic">front-end development</span>{" "}
+            that impresses with its{" "}
+            <span className="text-white italic">design and precision.</span>{" "}
           </p>
 
           {/* Button mit Slide-Effekt in Orange & Download-Funktion */}
