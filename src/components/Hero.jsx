@@ -4,14 +4,14 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center px-6 md:px-24 overflow-hidden bg-dark-bg"
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-dark-bg"
     >
-      {/* Sanfte Hintergrund-Glows */}
-      <div className="absolute top-1/4 -right-20 w-64 h-64 md:w-96 md:h-96 bg-accent-orange/10 rounded-full blur-[120px] animate-pulse"></div>
-      <div className="absolute bottom-1/4 -left-20 w-48 h-48 md:w-72 md:h-72 bg-white/5 rounded-full blur-[100px]"></div>
+      {/* Container zur Begrenzung der Breite auf Riesen-Monitoren */}
+      <div className="max-w-[1600px] mx-auto w-full px-6 md:px-24 z-10 relative">
+        {/* Sanfte Hintergrund-Glows (jetzt relativ zum Content) */}
+        <div className="absolute top-0 -right-20 w-64 h-64 md:w-96 md:h-96 bg-accent-orange/10 rounded-full blur-[120px] animate-pulse -z-10"></div>
 
-      <div className="z-10 relative">
-        {/* Eyecatcher: Status-Indikator */}
+        {/* Eyecatcher */}
         <div className="flex items-center gap-4 mb-6 md:mb-8 animate-fade-in">
           <div className="w-8 md:w-10 h-[1px] bg-accent-orange"></div>
           <span className="text-accent-orange font-mono text-[9px] md:text-[10px] tracking-[0.4em] uppercase">
@@ -19,7 +19,7 @@ const Hero = () => {
           </span>
         </div>
 
-        {/* Headline: Responsive Größen (5xl auf Mobile!) */}
+        {/* Headline */}
         <h1 className="text-5xl md:text-8xl lg:text-[9rem] font-medium leading-[0.95] md:leading-[0.9] uppercase tracking-tighter">
           <span className="text-accent-orange block transition-all duration-700 hover:tracking-widest cursor-default">
             FULLSTACK
@@ -55,7 +55,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Quote: Nur auf Desktop sichtbar (lg:block) */}
+      {/* Quote: Bleibt an der Seite, aber innerhalb des Blickfelds */}
       <div className="absolute bottom-16 right-10 md:right-24 text-right hidden lg:block">
         <div className="font-mono">
           <p className="text-accent-orange text-sm mb-2 font-bold">
@@ -71,11 +71,6 @@ const Hero = () => {
             &lt;/span&gt;
           </p>
         </div>
-      </div>
-
-      {/* E-Mail: Nur auf Desktop sichtbar */}
-      <div className="absolute left-6 bottom-24 origin-bottom-left -rotate-90 text-gray-500 text-[10px] tracking-[0.4em] font-medium hidden lg:block uppercase border-b border-white/10 pb-1">
-        joshua.vaeth@yahoo.de
       </div>
     </section>
   );
