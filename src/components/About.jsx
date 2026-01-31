@@ -33,7 +33,7 @@ const About = () => {
         <div className="w-full lg:w-2/3 order-2 lg:order-1">
           {/* Headline "Hey..." - Etwas kleiner */}
           <h3 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tighter">
-            Hey, i'm Joshua.
+            Hey! I'm Joshua.
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
