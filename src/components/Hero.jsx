@@ -4,14 +4,19 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-dark-bg"
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#050505]"
     >
-      {/* Container zur Begrenzung der Breite auf Riesen-Monitoren */}
-      <div className="max-w-[1600px] mx-auto w-full px-6 md:px-24 z-10 relative">
-        {/* Sanfte Hintergrund-Glows (jetzt relativ zum Content) */}
-        <div className="absolute top-0 -right-20 w-64 h-64 md:w-96 md:h-96 bg-accent-orange/10 rounded-full blur-[120px] animate-pulse -z-10"></div>
+      {/* 1. HINTERGRUND-GLOWS - Tiefer gesetzt */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none z-0">
+        {/* Haupt-Glow Orange: Von top-[12%] auf top-[25%] geschoben */}
+        <div className="absolute top-[25%] right-[8%] w-[250px] h-[250px] md:w-[450px] md:h-[450px] bg-[#bc5939]/40 rounded-full blur-[60px] md:blur-[90px] animate-soft-glow"></div>
 
-        {/* Eyecatcher */}
+        {/* Kontrast-Glow: Etwas tiefer und weiter nach links */}
+        <div className="absolute bottom-[15%] left-[5%] w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-white/5 rounded-full blur-[70px] opacity-30"></div>
+      </div>
+
+      {/* 2. CONTENT CONTAINER */}
+      <div className="max-w-[1600px] mx-auto w-full px-6 md:px-24 z-10 relative">
         <div className="flex items-center gap-4 mb-6 md:mb-8 animate-fade-in">
           <div className="w-8 md:w-10 h-[1px] bg-accent-orange"></div>
           <span className="text-accent-orange font-mono text-[9px] md:text-[10px] tracking-[0.4em] uppercase">
@@ -19,7 +24,6 @@ const Hero = () => {
           </span>
         </div>
 
-        {/* Headline */}
         <h1 className="text-5xl md:text-8xl lg:text-[9rem] font-medium leading-[0.95] md:leading-[0.9] uppercase tracking-tighter">
           <span className="text-accent-orange block transition-all duration-700 hover:tracking-widest cursor-default">
             FULLSTACK
@@ -55,8 +59,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Quote: Bleibt an der Seite, aber innerhalb des Blickfelds */}
-      <div className="absolute bottom-16 right-10 md:right-24 text-right hidden lg:block">
+      {/* 3. QUOTE */}
+      <div className="absolute bottom-16 right-10 md:right-24 text-right hidden lg:block z-10">
         <div className="font-mono">
           <p className="text-accent-orange text-sm mb-2 font-bold">
             &lt;span&gt;
