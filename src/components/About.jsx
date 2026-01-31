@@ -65,7 +65,7 @@ const About = () => {
         <div className="w-full lg:w-1/3 order-1 lg:order-2">
           <div className="relative aspect-[3/4] max-h-[450px] overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-500 border border-gray-800">
             <img
-              src="/src/assets/joshua.jpg"
+              src="joshua.jpg"
               alt="Joshua Väth"
               className="w-full h-full object-cover object-top"
               onError={(e) => {
