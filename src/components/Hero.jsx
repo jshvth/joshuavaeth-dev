@@ -35,7 +35,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-12 mt-8 md:mt-12">
           <p className="text-gray-400 max-w-md text-base md:text-xl leading-relaxed font-light">
             Hi! I'm <span className="text-white font-medium">Joshua</span>.
-            Frontend developer with a particular passion for{" "}
+            Fullstack developer with a particular passion for{" "}
             <span className="text-white italic">front-end development</span>{" "}
             that impresses with its{" "}
             <span className="text-white italic">
