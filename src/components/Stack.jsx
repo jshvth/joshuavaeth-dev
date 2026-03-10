@@ -14,6 +14,8 @@ import {
   SiGithub,
   SiTailwindcss,
   SiPostman,
+  SiTypescript,
+  SiDocker,
 } from "react-icons/si";
 import { TbApi, TbHierarchy2 } from "react-icons/tb";
 
@@ -25,6 +27,7 @@ const Stack = () => {
         { name: "HTML", icon: <SiHtml5 className="text-[#E34F26]" /> },
         { name: "CSS3", icon: <SiCss3 className="text-[#1572B6]" /> },
         { name: "JS", icon: <SiJavascript className="text-[#F7DF1E]" /> },
+        { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" />, },
         { name: "React", icon: <SiReact className="text-[#61DAFB]" /> },
         {
           name: "Tailwind",
@@ -48,6 +51,7 @@ const Stack = () => {
       skills: [
         { name: "Git", icon: <SiGit className="text-[#F05032]" /> },
         { name: "GitHub", icon: <SiGithub className="text-white" /> },
+        { name: "Docker", icon: <SiDocker className="text-[#2496ED]" /> },
         { name: "Postman", icon: <SiPostman className="text-[#FF6C37]" /> },
       ],
     },
