@@ -27,7 +27,7 @@ const About = () => {
                   // Professional Path
                 </p>
                 <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-                  Frontend Developer focused on building modern, responsive web
+                  Fullstack Developer focused on building modern, responsive web
                   applications with clean UI and great performance. I believe in
                   a{" "}
                   <span className="text-white italic">
