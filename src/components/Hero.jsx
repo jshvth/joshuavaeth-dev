@@ -25,7 +25,7 @@ const Hero = () => {
 
         <h1 className="text-5xl md:text-8xl lg:text-[9rem] font-medium leading-[0.95] md:leading-[0.9] uppercase tracking-tighter">
           <span className="text-accent-orange block transition-all duration-700 hover:tracking-widest cursor-default">
-            FRONTEND
+            FULLSTACK
           </span>
           <span className="text-white block opacity-90 italic font-light">
             DEVELOPER
