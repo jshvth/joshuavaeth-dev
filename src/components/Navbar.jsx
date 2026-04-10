@@ -39,7 +39,7 @@ const Navbar = () => {
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className="p-4 text-3xl md:text-5xl hover:text-accent-orange duration-300 cursor-pointer uppercase font-bold tracking-tighter"
+              className="p-4 text-3xl md:text-5xl hover:text-accent-orange duration-300 cursor-pointer uppercase font-bold tracking-tighter text-white"
             >
               <a onClick={closeNav} href={item.link}>
                 {item.text}
@@ -48,7 +48,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Bottom Menu Link: Buy Me A Coffee (Ersatz für Socials) */}
+        {/* Bottom Menu Link: Buy Me A Coffee */}
         <div className="absolute bottom-16 flex flex-col items-center gap-4 text-gray-400">
           <div className="w-8 h-[1px] bg-white/10"></div>
           <a
