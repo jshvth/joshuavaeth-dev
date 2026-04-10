@@ -25,17 +25,17 @@ const Hero = () => {
 
         <h1 className="text-5xl md:text-8xl lg:text-[9rem] font-medium leading-[0.95] md:leading-[0.9] uppercase tracking-tighter">
           <span className="text-accent-orange block transition-all duration-700 hover:tracking-widest cursor-default">
-            FULLSTACK
+            SOFTWARE
           </span>
           <span className="text-white block opacity-90 italic font-light">
-            DEVELOPER
+            ENGINEER
           </span>
         </h1>
 
         <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-12 mt-8 md:mt-12">
           <p className="text-gray-400 max-w-md text-base md:text-xl leading-relaxed font-light">
             Hi! I'm <span className="text-white font-medium">Joshua</span>.
-            Fullstack developer with a particular passion for{" "}
+            Software Engineer with a particular passion for{" "}
             <span className="text-white italic">front-end development</span>{" "}
             that impresses with its{" "}
             <span className="text-white italic">

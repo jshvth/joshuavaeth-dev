@@ -3,10 +3,16 @@ import React from "react";
 const Experience = () => {
   const experiences = [
     {
-      title: "Master School Institute of Technology",
-      role: "Software Engineering - Fullstack",
+      title: "Webeet.io",
+      role: "Software Engineering",
       period: "Feb 2025 - Present",
       current: true,
+    },
+    {
+      title: "Master School Institute of Technology",
+      role: "Software Engineering - Fullstack",
+      period: "Feb 2025 - Feb 2026",
+      current: false,
     },
     {
       title: "Atomos GmbH",
