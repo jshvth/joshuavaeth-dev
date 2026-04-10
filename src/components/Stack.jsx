@@ -16,8 +16,14 @@ import {
   SiPostman,
   SiTypescript,
   SiDocker,
+  SiNextdotjs,
+  SiFastify,
+  SiPostgresql,
+  SiSupabase,
+  SiLangchain,
+  SiOpenai, // Stellvertretend für MCP
 } from "react-icons/si";
-import { TbApi, TbHierarchy2 } from "react-icons/tb";
+import { TbApi, TbVectorTriangle } from "react-icons/tb"; // Vector Triangle für Embeddings
 
 const Stack = () => {
   const stackData = [
@@ -27,8 +33,12 @@ const Stack = () => {
         { name: "HTML", icon: <SiHtml5 className="text-[#E34F26]" /> },
         { name: "CSS3", icon: <SiCss3 className="text-[#1572B6]" /> },
         { name: "JS", icon: <SiJavascript className="text-[#F7DF1E]" /> },
-        { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" />, },
+        {
+          name: "TypeScript",
+          icon: <SiTypescript className="text-[#3178C6]" />,
+        },
         { name: "React", icon: <SiReact className="text-[#61DAFB]" /> },
+        { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
         {
           name: "Tailwind",
           icon: <SiTailwindcss className="text-[#06B6D4]" />,
@@ -41,9 +51,30 @@ const Stack = () => {
         { name: "Python", icon: <SiPython className="text-[#3776AB]" /> },
         { name: "Node", icon: <SiNodedotjs className="text-[#339933]" /> },
         { name: "Flask", icon: <SiFlask className="text-white" /> },
+        { name: "Fastify", icon: <SiFastify className="text-white" /> },
+        {
+          name: "SQLAlchemy",
+          icon: <SiSqlalchemy className="text-[#D71F00]" />,
+        },
         { name: "MySQL", icon: <SiMysql className="text-[#4479A1]" /> },
+        {
+          name: "PostgreSQL",
+          icon: <SiPostgresql className="text-[#4169E1]" />,
+        },
         { name: "SQLite", icon: <SiSqlite className="text-[#003B57]" /> },
+        { name: "Supabase", icon: <SiSupabase className="text-[#3ECF8E]" /> },
         { name: "API", icon: <TbApi className="text-[#00FF00]" /> },
+      ],
+    },
+    {
+      category: "AI & Data",
+      skills: [
+        { name: "LangChain", icon: <SiLangchain className="text-[#1C3C3C]" /> },
+        { name: "MCP", icon: <SiOpenai className="text-[#74aa9c]" /> },
+        {
+          name: "Vectors",
+          icon: <TbVectorTriangle className="text-[#FF00FF]" />,
+        },
       ],
     },
     {
