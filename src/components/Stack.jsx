@@ -21,9 +21,9 @@ import {
   SiPostgresql,
   SiSupabase,
   SiLangchain,
-  SiOpenai, // Stellvertretend für MCP
+  SiOpenai,
 } from "react-icons/si";
-import { TbApi, TbVectorTriangle } from "react-icons/tb"; // Vector Triangle für Embeddings
+import { TbApi, TbVectorTriangle } from "react-icons/tb";
 
 const Stack = () => {
   const stackData = [
@@ -89,39 +89,54 @@ const Stack = () => {
   ];
 
   return (
-    <section id="stack" className="py-16 px-6 md:px-24 bg-dark-bg">
-      <div className="max-w-7xl mx-auto space-y-12 md:space-y-16">
-        {stackData.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col lg:flex-row border-t border-white/10 pt-8 md:pt-10"
-          >
-            <div className="lg:w-1/4 mb-6 lg:mb-0">
-              <h2 className="text-lg md:text-2xl font-light text-white tracking-[0.3em] uppercase">
-                {item.category}
-              </h2>
-            </div>
+    <section
+      id="stack"
+      className="py-24 px-6 md:px-24 bg-dark-bg border-t border-white/5"
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Zentraler Header hinzugefügt */}
+        <div className="mb-20 text-center">
+          <span className="text-accent-orange font-mono text-xs uppercase tracking-[0.5em] mb-2 block">
+            Skills
+          </span>
+          <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase italic opacity-90 leading-none">
+            Techstack
+          </h2>
+        </div>
 
-            <div className="lg:w-3/4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 md:gap-x-10 gap-y-8 md:gap-y-12">
-              {item.skills.map((skill, sIndex) => (
-                <div
-                  key={sIndex}
-                  className="flex flex-col items-start gap-3 md:gap-4 group"
-                >
-                  <div className="text-3xl md:text-5xl transition-transform duration-300 group-hover:scale-110">
-                    {skill.icon}
+        <div className="space-y-12 md:space-y-16">
+          {stackData.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col lg:flex-row border-t border-white/10 pt-8 md:pt-10"
+            >
+              <div className="lg:w-1/4 mb-6 lg:mb-0">
+                <h2 className="text-lg md:text-2xl font-light text-white tracking-[0.3em] uppercase">
+                  {item.category}
+                </h2>
+              </div>
+
+              <div className="lg:w-3/4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 md:gap-x-10 gap-y-8 md:gap-y-12">
+                {item.skills.map((skill, sIndex) => (
+                  <div
+                    key={sIndex}
+                    className="flex flex-col items-start gap-3 md:gap-4 group"
+                  >
+                    <div className="text-3xl md:text-5xl transition-transform duration-300 group-hover:scale-110">
+                      {skill.icon}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-[1px] h-3 bg-accent-orange"></div>
+                      <span className="text-gray-400 font-mono text-[9px] md:text-xs tracking-widest uppercase group-hover:text-white">
+                        {skill.name}
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-[1px] h-3 bg-accent-orange"></div>
-                    <span className="text-gray-400 font-mono text-[9px] md:text-xs tracking-widest uppercase group-hover:text-white">
-                      {skill.name}
-                    </span>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

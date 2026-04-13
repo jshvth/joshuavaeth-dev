@@ -20,7 +20,7 @@ const Projects = () => {
         "Edge Functions",
         "API Integration",
       ],
-      github: "https://github.com/jshvth", // Link ggf. anpassen
+      github: "https://github.com/jshvth/MangaPulse",
       demo: null,
     },
     {
@@ -33,7 +33,7 @@ const Projects = () => {
         "Features: JWT-Auth, Image Uploads, Dark Mode und EN/DE Lokalisierung.",
       ],
       tags: ["Flask", "React", "SQLAlchemy", "React Flow", "Python"],
-      github: "https://github.com/jshvth", // Link ggf. anpassen
+      github: "https://github.com/jshvth/plot-weavers-frontend",
       demo: null,
     },
     {
@@ -44,7 +44,7 @@ const Projects = () => {
         "Fokus auf innovative Datenvisualisierung und User Experience.",
       ],
       tags: ["Next.js", "AI", "TypeScript"],
-      github: null,
+      github: "https://github.com/jshvth/LumeaScope",
       demo: null,
     },
   ];
@@ -55,7 +55,8 @@ const Projects = () => {
       className="py-24 px-6 md:px-24 bg-dark-bg border-t border-white/5"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="mb-20">
+        {/* Zentraler Header - Einheitlich mit Experience */}
+        <div className="mb-20 text-center">
           <span className="text-accent-orange font-mono text-xs uppercase tracking-[0.5em] mb-2 block">
             Selected Work
           </span>
@@ -69,16 +70,15 @@ const Projects = () => {
             <div
               key={index}
               className={`flex flex-col lg:flex-row gap-12 items-start ${
-                project.title === "LumeaScope" ? "opacity-50" : ""
+                project.title === "LumeaScope" ? "opacity-60" : ""
               }`}
             >
-              {/* Projekt-Info */}
               <div className="lg:w-1/2 space-y-6">
                 <div>
                   <span className="text-accent-orange font-mono text-[10px] uppercase tracking-[0.3em]">
                     {project.category}
                   </span>
-                  <h3 className="text-4xl md:text-6xl font-bold text-white mt-2 tracking-tight group-hover:text-accent-orange transition-colors">
+                  <h3 className="text-4xl md:text-6xl font-bold text-white mt-2 tracking-tight">
                     {project.title}
                   </h3>
                 </div>
@@ -114,7 +114,7 @@ const Projects = () => {
                       rel="noreferrer"
                       className="text-white hover:text-accent-orange transition-all flex items-center gap-2 uppercase text-[10px] tracking-[0.2em] font-bold border-b border-accent-orange/0 hover:border-accent-orange pb-1"
                     >
-                      <SiGithub size={18} /> GitHub
+                      <SiGithub size={18} /> Link
                     </a>
                   )}
                   {project.demo && (
@@ -130,7 +130,6 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* Visueller Platzhalter */}
               <div className="lg:w-1/2 w-full aspect-video bg-[#0a0a0a] border border-white/5 relative group overflow-hidden rounded-sm">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <div className="flex items-center justify-center h-full">
@@ -138,7 +137,6 @@ const Projects = () => {
                     {project.title.charAt(0)}
                   </span>
                 </div>
-                {/* Overlay für "Coming Soon" */}
                 {project.title === "LumeaScope" && (
                   <div className="absolute inset-0 flex items-center justify-center bg-dark-bg/40 backdrop-blur-[2px]">
                     <span className="text-white font-mono text-[10px] uppercase tracking-[0.5em] border border-white/20 px-4 py-2">
