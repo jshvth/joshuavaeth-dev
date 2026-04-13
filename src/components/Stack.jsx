@@ -100,7 +100,7 @@ const Stack = () => {
             Skills
           </span>
           <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase italic opacity-90 leading-none">
-            Techstack
+            Stack
           </h2>
         </div>
 
