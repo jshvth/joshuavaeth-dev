@@ -7,14 +7,14 @@ const About = () => {
       className="min-h-screen flex flex-col justify-center bg-dark-bg py-12 md:py-16"
     >
       <div className="max-w-[1600px] mx-auto w-full px-6 md:px-20">
-        {/* Die Trennlinie - Jetzt als oberster Einstieg */}
+        {/* Die Trennlinie - Jetzt mit orangefarbenem Label */}
         <div className="w-full h-[1px] bg-gray-800 mb-10 md:mb-16 flex items-center">
-          <span className="text-gray-500 text-[9px] md:text-[10px] uppercase tracking-[0.3em] bg-dark-bg pr-4 md:pr-6">
+          <span className="text-accent-orange text-[9px] md:text-[10px] uppercase tracking-[0.3em] bg-dark-bg pr-4 md:pr-6">
             Profile Details
           </span>
         </div>
 
-        {/* Der Detail-Bereich - Durch das Entfernen des Statements rutscht dieser Part nach oben */}
+        {/* Der Detail-Bereich */}
         <div className="flex flex-col lg:flex-row gap-10 md:gap-16 items-start">
           <div className="w-full lg:w-2/3 order-2 lg:order-1">
             <h3 className="text-4xl md:text-7xl font-bold text-white mb-8 tracking-tighter">
@@ -65,7 +65,6 @@ const About = () => {
                     "https://via.placeholder.com/600x800?text=Joshua";
                 }}
               />
-              {/* Ein subtiler Overlay-Effekt für mehr Tiefe */}
               <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/40 to-transparent opacity-60"></div>
             </div>
           </div>
