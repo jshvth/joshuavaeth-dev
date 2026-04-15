@@ -8,7 +8,7 @@ import Experience from "./components/Experience";
 import Reveal from "./components/Reveal";
 import CustomCursor from "./components/CustomCursor";
 import ScrollProgress from "./components/ScrollProgress";
-import Projects from "./components/Projects";
+// import Projects from "./components/Projects";
 
 function App() {
   useEffect(() => {
@@ -49,9 +49,9 @@ function App() {
       <Reveal>
         <Stack />
       </Reveal>
-      <Reveal>
+      {/* <Reveal>
         <Projects />
-      </Reveal>
+      </Reveal> */}
       <Reveal>
         <Footer />
       </Reveal>
