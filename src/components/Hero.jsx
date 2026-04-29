@@ -45,7 +45,7 @@ const Hero = () => {
 
           <div className="flex flex-col gap-4">
             <a
-              href="/SE_JoshuaVäth_New_DE.pdf"
+              href="/SE_JoshuaVäth_EN.pdf"
               download="SE_JoshuaVäth_EN.pdf"
               className="relative px-8 py-4 md:px-10 md:py-4 bg-transparent border border-accent-orange/40 text-white font-medium rounded-sm overflow-hidden group transition-all cursor-pointer inline-block text-center"
             >
